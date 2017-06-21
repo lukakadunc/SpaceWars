@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+	<script src="./scripts/main.js"></script>
+
+	<title>Shooting game</title>
+	<style>
+		@keyframes animatedBackground {
+			from { background-position: 0 0; }
+			to { background-position: 100% 0; }
+		}
+		#gradient	{
+			width: 100%;
+			height: 704px;
+			background: url(http://images3.wikia.nocookie.net/__cb20100720031651/snk/images/0/07/Kofxithedifferentspacebg.gif) 0px 0px;
+			padding-top: 10%;
+
+			animation: animatedBackground 80s infinite;
+		}
+		#menu {
+			width: 200px;
+			height: 250px;
+			margin-left: 49%;
+
+
+
+		}
+		a {
+			color: darkred;
+			font-family: "Lucida Console";
+			font-style: normal;
+			font-size: 200%;
+
+		}
+
+		#text{
+			color: darkred;
+			font-family: "Lucida Console";
+			font-style: normal;
+			font-size: 200%;
+		}
+		#text2{
+			color: darkred;
+			font-family: "Lucida Console";
+			font-style: normal;
+			font-size: 120%;
+		}
+
+		#submit {
+			color: darkred;
+			font-family: "Lucida Console";
+			font-style: normal;
+			font-size: 200%;
+			background:none!important;
+			border:none;
+			padding:0!important;
+			/*border is optional*/
+			border-bottom:1px solid #444;
+			cursor: pointer;
+		}
+
+
+
+		#submit1 {
+			color: darkred;
+			font-family: "Lucida Console";
+			font-style: normal;
+			font-size: 120%;
+			background:none!important;
+			border:none;
+			padding:0!important;
+			/*border is optional*/
+			border-bottom:1px solid #444;
+			cursor: pointer;
+		}
+	</style>
+
+
+
+</head>
+<body style="background-color: black" onload="hide()">
+<embed src="sound/menu.mp3" autostart="true" loop="true"
+	   width="2" height="0">
+</embed>
+<div id="gradient">
+	<div id="menu">
+		<form action="game.html" method="GET">
+
+			<input type="text" id="tezavnost" name="tezavnost" />
+
+			<input id="submit" type="submit" value="PLAY" />
+		</form>
+
+		<p id="text">DIFFICULTY:</p>
+		<form id="text2" action="">
+			<input type="radio" id="r1" name="tez" value="easy"> Easy<br>
+			<input type="radio" id="r2" name="tez" value="medium"> Meduim<br>
+			<input type="radio" id="r3" name="tez" value="hard"> Hard
+		</form>
+
+
+
+		<input id="submit1" type="button" onclick="init()" value="Save"/>
+
+		<script>
+			function hide() {
+				document.getElementById("tezavnost").style.visibility = "hidden";
+
+			}
+
+			function init(){
+
+
+				if(document.getElementById('r1').checked)
+					document.getElementById("tezavnost").defaultValue = "easy";
+
+				if(document.getElementById('r2').checked)
+					document.getElementById("tezavnost").defaultValue = "medium";
+
+				if(document.getElementById('r3').checked)
+					document.getElementById("tezavnost").defaultValue = "hard";
+
+
+
+			}
+
+
+
+		</script>
+
+	</div>
+</div>
+</body>
+</html>
