@@ -10,4 +10,4 @@ Instructions:<br>
  
  
  NOTE:<br>
- This game isn fully finished beacuse lack of my time. It was part of Seminar work(Computer Graphics).
+ This game isnt fully finished beacuse lack of my time. It was part of Seminar work(Computer Graphics).
